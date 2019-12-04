@@ -109,7 +109,7 @@ class Lexer():
 				self.advance()
 			elif self.current_char in DIGITS:
 				tokens.append(self.make_number())
-			elif self.current_char in [token for token in Tokens.keys()]:
+			elif self.current_char in Tokens.keys():
 				for token in Tokens.keys():
 					if self.current_char in token:
 						tokens.append(Token(Tokens[token]))
